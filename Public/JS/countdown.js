@@ -1,9 +1,15 @@
 let alternatives = ['days', 'hours', 'minutes', 'seconds']
 
+const showEverything = () => {
+    document.querySelector('h1').style.visibility = 'visible'
+    document.getElementById('countdown').style.display = 'flex'
+    document.getElementById('loader').style.display = 'none'
+}
+
 const calculateObject = () => {
     let thisYear = new Date().getUTCFullYear()
     let now = new Date()
-    let holiDate = new Date(thisYear, 11, 23, 14, 00, 00, 00)
+    let holiDate = new Date(thisYear, 11, 22, 13, 50, 00, 00)
     let calc = holiDate - now
     if (now.getTime() >= holiDate.getTime()) return 'after'
     else return {
@@ -18,7 +24,7 @@ const loadObject = () => {
     for (const a in alternatives) {
         let x = document.getElementById(alternatives[a])
         if (calculateObject() == 'after') {
-            document.querySelector('h1').innerText = 'Holidays Are Here Finally!'
+            document.querySelector('h1').innerHTML = `${twemoji.parse('🎁')} Holidays ${twemoji.parse('🥮')} are finally Here!`
             document.getElementById('countdown').style.display = 'none'
             return 
         }
@@ -26,4 +32,5 @@ const loadObject = () => {
     }
 }
 
+setTimeout(showEverything, 1500)
 setInterval(loadObject, 1000)
