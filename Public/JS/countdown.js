@@ -1,6 +1,7 @@
 let alternatives = ['days', 'hours', 'minutes', 'seconds']
 
 const showEverything = () => {
+    document.querySelector('h1').innerHTML = document.querySelector('h1').innerHTML.replace('0000', new Date().getUTCFullYear())
     document.querySelector('h1').style.visibility = 'visible'
     document.getElementById('countdown').style.display = 'flex'
     document.getElementById('loader').style.display = 'none'
