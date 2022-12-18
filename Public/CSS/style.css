@@ -81,10 +81,11 @@ h1 {
 }
 
 .fallingSnow {
-    height: 1vh;
-    width: 1vh;
+    height: var(--w);
+    width: var(--w);
     background-color: var(--snow-color);
     border-radius: 100%;
+    opacity: var(--o);
 }
 
 #snowflakes {
