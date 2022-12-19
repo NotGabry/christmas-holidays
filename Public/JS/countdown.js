@@ -10,7 +10,7 @@ const showEverything = () => {
 const calculateObject = () => {
     let thisYear = new Date().getUTCFullYear()
     let now = new Date()
-    let holiDate = new Date(thisYear, 11, 22, 13, 50, 00, 00)
+    let holiDate = new Date(thisYear, 11, 22, 11, 00, 00, 00)
     let calc = holiDate - now
     if (now.getTime() >= holiDate.getTime()) return 'after'
     else return {
