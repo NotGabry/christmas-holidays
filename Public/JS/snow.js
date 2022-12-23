@@ -18,7 +18,6 @@ const calculateSnowFalling = () => {
 
     let opacity = Math.random() * (80 - 40) + 40
     let size = Math.random() * (2 - 1) + 1
-    console.log(firstRow, secondRow)
     return { vertical: second, horizontal: first, size: size, opacity: opacity } 
 }
 

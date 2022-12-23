@@ -2,9 +2,9 @@ let alternatives = ['days', 'hours', 'minutes', 'seconds']
 
 const showEverything = () => {
     document.querySelector('h1').innerHTML = document.querySelector('h1').innerHTML.replace('0000', new Date().getUTCFullYear())
-    document.querySelector('h1').style.visibility = 'visible'
-    document.getElementById('countdown').style.display = 'flex'
     document.getElementById('loader').style.display = 'none'
+    document.querySelector('h1').style.visibility = 'visible'
+    if (calculateObject() != 'after') document.getElementById('countdown').style.visibility = 'visible'
 }
 
 const calculateObject = () => {
@@ -24,11 +24,7 @@ const calculateObject = () => {
 const loadObject = () => {
     for (const a in alternatives) {
         let x = document.getElementById(alternatives[a])
-        if (calculateObject() == 'after') {
-            document.querySelector('h1').innerHTML = `${twemoji.parse('🎁')} Holidays ${twemoji.parse('🥮')} are finally Here!`
-            document.getElementById('countdown').style.display = 'none'
-            return 
-        }
+        if (calculateObject() == 'after') return document.querySelector('h1').innerHTML = `${twemoji.parse('🎁')} Holidays are finally Here!`
         else x.innerText = Math.floor(calculateObject()[alternatives[a]])
     }
 }

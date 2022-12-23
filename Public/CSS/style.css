@@ -44,7 +44,8 @@ h1 {
 }
 
 #countdown {
-    display: none;
+    visibility: hidden;
+    display: flex;
     transform: scale(2);
 }
 
@@ -81,6 +82,7 @@ h1 {
 }
 
 .fallingSnow {
+    user-select: none;
     height: var(--w);
     width: var(--w);
     background-color: var(--snow-color);
@@ -96,7 +98,7 @@ h1 {
     right: 0;
     bottom: 0;
     z-index: 9999;
-    pointer-events:none;
+    pointer-events: none;
 }
 
 .snowflake {
@@ -122,7 +124,7 @@ img.emoji {
     border: 3px solid var(--text-color);
     border-radius: 50%;
     display: inline-block;
-    position: relative;
+    position: fixed;
     box-sizing: border-box;
     animation: rotation 1s linear infinite;
 } 
