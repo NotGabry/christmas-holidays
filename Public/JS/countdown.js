@@ -10,7 +10,7 @@ const showEverything = () => {
 const calculateObject = () => {
     let thisYear = new Date().getUTCFullYear()
     let now = new Date()
-    let holiDate = new Date(thisYear, 11, 22, 11, 00, 00, 00)
+    let holiDate = new Date(thisYear, 11, 25, 00, 00, 00, 00)
     let calc = holiDate - now
     if (now.getTime() >= holiDate.getTime()) return 'after'
     else return {
@@ -24,7 +24,10 @@ const calculateObject = () => {
 const loadObject = () => {
     for (const a in alternatives) {
         let x = document.getElementById(alternatives[a])
-        if (calculateObject() == 'after') return document.querySelector('h1').innerHTML = `${twemoji.parse('🎁')} Holidays are finally Here!`
+        if (calculateObject() == 'after') {
+            document.querySelector('h1').innerHTML = `${twemoji.parse('🎁')} Christmas is finally Here!`
+            return document.getElementById('countdown').style.visibility = 'hidden'
+        } 
         else x.innerText = Math.floor(calculateObject()[alternatives[a]])
     }
 }

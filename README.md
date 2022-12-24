@@ -1,7 +1,7 @@
 <div align="center">
 
 # 🎄 Christmas Holidays
-#### 🖊 Christmas Holidays Countdown for Students 🗒
+#### 🖊 Christmas Countdown 🗒
 
 </div>
 <hr>
