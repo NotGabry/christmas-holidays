@@ -1,7 +1,7 @@
 <div align="center">
 
-# 🎄 Christmas is Almost Here
-#### 🖊 Christmas Countdown 🗒
+# 🎄 Christmas Countdown
+🖊 Christmas is almost here so why don't we count the days. 🗒
 
 </div>
 <hr>
